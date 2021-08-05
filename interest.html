@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>function calculateinterest(){
+  let principal = document.getElementById('p').value;
+  let rate = document.getElementById('r').value;
+  let time = document.getElementById('t').value;
+   
+  let simpleinterest = principal* rate* time /100;
+  
+  document.getElementById('info').innerHTML = simpleinterest;
+}
+function plcalculate(){
+  
+  var sell = document.getElementById("sp").value;
+  var cost = document.getElementById("cp").value;
+  
+  var s = sell-cost
+  var c = cost-sell
+ if(sell>cost)
+   document.getElementById("aaa").innerHTML="There is profit of Rs "+s; 
+   else if(cost>sell)
+   document.getElementById("aaa").innerHTML="There is loss of Rs "+c;
+  else 
+    document.getElementById("aaa").innerHTML="There is no profit and no loss";
+}</script>
+  </head>
+  <body>
+    <h2>
+      Simple Interest Calculator
+    </h2>
+  Principal<br>  <input type="number" required id="p"><br>
+    Rate <br><input type="number" required id="r"><br>
+   Time <br> <input type="number" required id="t"><br>
+    
+    <br>
+    <button type="button" onclick="calculateinterest()">
+      Calculate Interest
+    </button>
+    <h3 id="info">
+    </h3>
+    <h2>
+      Profit or Loss Calculator
+      
+    </h2>
+    
+    Cost Price <br><input type="number" required id="cp"><br>
+    Selling Price <br><input type="number" required id="sp"><br>
+      
+    <br>
+      <button type="button" onclick="plcalculate()">
+        Calculate Profit or Loss
+    </button>
+    <h3 id="aaa">
+      
+    </h3>
+  </body>
+</html>
